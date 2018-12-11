@@ -1,6 +1,8 @@
 # Data_Analysis_MapReduce_Hadoop_&&_Spark
 Basic Info :
-This project gets data from new york police department about accidents occured throughout multiple year, cleans the data, and process the data
+This project gets data from new york police department about accidents occured throughout multiple year, cleans the data, and process the data. The objective is achieved by using both MapReduce and Spark.
+
+MapReduce
 
 About the file : 
 Main file : Cleaning_data.java
@@ -34,4 +36,11 @@ Benefits of using a chained MapReduce job :
 
 Reducer : The reducer gets the key and all values associated with that key from the mapper2. The IntWritable is iterable since for one key there are multiple values associated with it. The output of reducer is stored in a hashmap which further is used in the cleanup method of reducer to get the maximum amongst different columns.
 
+Spark 
 
+About the file : 
+Main file --> Spark_clean.py
+
+DataFrames are used to store data in a tabular fashion with/without header. If the input file contains header, data is processed , however, if it does not contain header, a header is added to it using the toDF method, which provides a way to rename the default column(_c0,_c1 etc) to the desired column name.
+
+SQL queries are used to fetch the data based on the required conditions.
